@@ -1,3 +1,12 @@
 body {
     font-size: large;
 }
+
+.navigation {
+    margin: 10px;
+}
+
+.navigation > a {
+    color: lightblue;
+    padding-right: 30px;
+}
