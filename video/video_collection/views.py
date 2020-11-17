@@ -57,3 +57,13 @@ def video_list(request):
 def video_detail(request, video_pk):
     video = get_object_or_404(Video, pk=video_pk)
     return render(request, 'video_collection/video_detail.html', {'video': video})
+
+
+def delete_video(request, video_pk):
+    if request.method == 'POST':
+        video = get_object_or_404(Video, pk=video_pk)
+        video.delete()
+        
+        messages.info(request, f'Deleted {video.name}') 
+    
+    return redirect('home')

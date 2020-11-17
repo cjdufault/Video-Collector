@@ -4,4 +4,8 @@
 
 <h2>Welcome to the {{ app_name }} app!</h2>
 
+{% for message in messages %}
+  <li>{{ message }}</li>
+{% endfor %}
+
 {% endblock %}
